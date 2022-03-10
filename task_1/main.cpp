@@ -6,18 +6,45 @@ using namespace std;
 
 int main()
 {
-    const int size = 5;
-    int keys[size];
+    BinTree myTree;
 
-    cout << "Enter " << size << " elements separated by a space" << endl;
-    for (int i = 0; i < size; i++)
+    /* cout << endl << "Printing the tree in order before adding numbers..." << endl;
+    myTree.PrintInOrder(); */
+
+    cout << endl << "Enter keys to add to the tree. Enter -1 to stop the process." << endl;
+    int input = 0;
+    while (input != -1)
     {
-        cin >> keys[i];
+        cin >> input;
+        if (input != -1)
+        {
+            myTree.AddLeaf(input);
+        }
     }
-
-    BinTree myTree = BinTree(keys, size);
     
-    cout << "The tree sum is equal to " << myTree.SumTree() << endl;
+    /* cout << endl << "Printing the tree in order after adding numbers..." << endl;
+    myTree.PrintInOrder(); */
+
+    cout << endl << "The tree sum is " << myTree.SumTree() << "." << endl << endl;
+
+    /* cout << "Enter a key value you want to know the information about: ";
+    int infoKey;
+    cin >> infoKey;
+    myTree.PrintChildren(infoKey);
+
+    cout << endl << "Enter a key value to delete. Enter -1 to stop the process." << endl;
+    input = 0;
+    while (input != -1)
+    {
+        cout << endl << "Delete key: ";
+        cin >> input;
+        if (input != -1)
+        {
+            myTree.RemoveNode(input);
+            cout << "Printing current tree condition..." << endl;
+            myTree.PrintInOrder();
+        }
+    } */
 
     return 0;
 }
