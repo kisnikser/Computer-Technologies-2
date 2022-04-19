@@ -8,8 +8,8 @@ int main()
 {
     BinTree myTree;
 
-    /* cout << endl << "Printing the tree in order before adding numbers..." << endl;
-    myTree.PrintInOrder(); */
+    cout << endl << "Printing the tree in order before adding numbers..." << endl;
+    myTree.PrintInOrder();
 
     cout << endl << "Enter keys to add to the tree. Enter -1 to stop the process." << endl;
     int input = 0;
@@ -22,12 +22,14 @@ int main()
         }
     }
     
-    /* cout << endl << "Printing the tree in order after adding numbers..." << endl;
-    myTree.PrintInOrder(); */
+    cout << endl << "Printing the tree in order after adding numbers..." << endl;
+    myTree.PrintInOrder();
 
     cout << endl << "The tree sum is " << myTree.SumTree() << "." << endl << endl;
 
-    /* cout << "Enter a key value you want to know the information about: ";
+    cout << endl << "The greatest value is " << myTree.FindGreatest() << endl;
+
+    cout << "Enter a key value you want to know the information about: ";
     int infoKey;
     cin >> infoKey;
     myTree.PrintChildren(infoKey);
@@ -44,7 +46,7 @@ int main()
             cout << "Printing current tree condition..." << endl;
             myTree.PrintInOrder();
         }
-    } */
+    }
 
     return 0;
 }
